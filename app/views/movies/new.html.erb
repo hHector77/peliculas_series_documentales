@@ -1,2 +1,13 @@
-<h1>Movies#new</h1>
-<p>Find me in app/views/movies/new.html.erb</p>
+<h1>Nueva Película</h1>
+<%= form_with(model: @movie, local: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :synopsis %>
+  <%= form.text_area :synopsis %>
+
+  <%= form.label :director %>
+  <%= form.text_field :director %>
+
+  <%= form.submit %>
+<% end %>
