@@ -1,4 +1,4 @@
-class Movie < ApplicationRecord
+class Serie < ApplicationRecord
     validates :name, :synopsis, :director, presence: true
-end
+  end
   
