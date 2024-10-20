@@ -1,2 +1,4 @@
 class Serie < ApplicationRecord
-end
+    validates :name, :synopsis, :director, presence: true
+  end
+  

@@ -1,2 +1,4 @@
 class DocumentaryFilm < ApplicationRecord
-end
+    validates :name, :synopsis, :director, presence: true
+  end
+  
