@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+Movie.create(name: 'Inception', synopsis: 'Un thriller que desafía la mente', director: 'Christopher Nolan')
+Serie.create(name: 'Breaking Bad', synopsis: 'Un profesor de secundaria se convierte en un capo de la metanfetamina', director: 'Vince Gilligan')
+DocumentaryFilm.create(name: 'El dilema de las redes sociales', synopsis: 'Explora el impacto humano peligroso de las redes sociales', director: 'Jeff Orlowski')
+
