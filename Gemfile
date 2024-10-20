@@ -58,3 +58,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'sass-rails', '>= 6'
+gem 'uglifier', '>= 1.3.0'
+gem 'turbolinks', '~> 5'
+gem 'bootstrap', '~> 5.1.3'
+gem 'faker'
