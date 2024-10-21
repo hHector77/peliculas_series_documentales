@@ -1,7 +1,13 @@
-<h1>Películas</h1>
-<%= link_to 'Nueva Película', new_movie_path %>
-<ul>
-  <% @movies.each do |movie| %>
-    <li><%= movie.name %> - <%= movie.synopsis %> - <%= movie.director %></li>
-  <% end %>
-</ul>
+<h1 class="mb-4">Películas</h1>
+
+<% @movies.each do |movie| %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h2 class="card-title"><%= movie.name %></h2>
+      <p class="card-text"><%= movie.synopsis %></p>
+      <p class="card-text"><small class="text-muted">Director: <%= movie.director %></small></p>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to 'Añadir nueva película', new_movie_path, class: 'btn btn-primary' %>

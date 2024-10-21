@@ -10,7 +10,7 @@ class SeriesController < ApplicationController
   def create
     @serie = Serie.new(serie_params)
     if @serie.save
-      redirect_to series_index_path
+      redirect_to series_path
     else
       render :new
     end

@@ -1,7 +1,13 @@
-<h1>Documentales</h1>
-<%= link_to 'Nuevo Documental', new_documentary_film_path %>
-<ul>
-  <% @documentary_films.each do |documentary_film| %>
-    <li><%= documentary_film.name %> - <%= documentary_film.synopsis %> - <%= documentary_film.director %></li>
-  <% end %>
-</ul>
+<h1 class="mb-4">Documentales</h1>
+
+<% @documentary_films.each do |documentary| %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <h2 class="card-title"><%= documentary.name %></h2>
+      <p class="card-text"><%= documentary.synopsis %></p>
+      <p class="card-text"><small class="text-muted">Director: <%= documentary.director %></small></p>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to 'Añadir nuevo documental', new_documentary_film_path, class: 'btn btn-primary' %>

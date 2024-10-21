@@ -1,13 +1,19 @@
-<h1>Nuevo Documental</h1>
-<%= form_with(model: @documentary_film, local: true) do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
+<h1 class="mb-4">Agregar Documental</h1>
 
-  <%= form.label :synopsis %>
-  <%= form.text_area :synopsis %>
-
-  <%= form.label :director %>
-  <%= form.text_field :director %>
-
-  <%= form.submit %>
+<%= form_with model: @documentary_films, local: true, class: 'mb-4' do |form| %>
+  <div class="mb-3">
+    <%= form.label :name, 'Nombre', class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :synopsis, 'Sinopsis', class: 'form-label' %>
+    <%= form.text_area :synopsis, class: 'form-control' %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :director, 'Director', class: 'form-label' %>
+    <%= form.text_field :director, class: 'form-control' %>
+  </div>
+  <%= form.submit 'Guardar', class: 'btn btn-success' %>
 <% end %>
+
+<%= link_to 'Volver a la lista', documentary_films_path, class: 'btn btn-secondary' %>

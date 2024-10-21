@@ -8,10 +8,14 @@ Rails.application.routes.draw do
   #get "movies/index"
   #get "movies/new"
   #get "movies/create"
-  resources :movies
-  resources :series
-  resources :documentary_films
-  root 'movies#index'
+  Rails.application.routes.draw do
+    resources :movies, only: [:index, :new, :create]
+    resources :series, only: [:index, :new, :create]
+    resources :documentary_films, only: [:index, :new, :create]
+  
+    root "movies#index"
+  end
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
